@@ -1,0 +1,74 @@
+/* src/styles/globals.css */
+
+/* Import your Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500&display=swap');
+
+/* Reset & Box-Sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML/body styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #faf5ee;
+  color: #4a423a;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images and media */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+/* Accent text (used in landing page) */
+.accent {
+  color: #a68e6f;
+}
+
+/* Call-to-action button */
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ebcb8b;
+  color: #4a423a;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #d8b56a;
+}
