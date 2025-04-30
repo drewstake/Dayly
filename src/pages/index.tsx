@@ -1,7 +1,7 @@
 // pages/index.tsx
-import { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +20,10 @@ const Home: NextPage = () => {
             Welcome to <span className="accent">Dayly</span>
           </h1>
           <p className="subtitle">
-            A cozy place to capture your thoughts, track moods, and build your journaling habit.
+            A cozy place to capture your thoughts, track moods, and build your
+            journaling habit.
           </p>
-          <Link href="/entries" className="cta">
+          <Link href="/signup" className="cta">
             Get Started
           </Link>
         </section>
@@ -38,7 +39,10 @@ const Home: NextPage = () => {
           </div>
           <div className="feature">
             <h2>Private & Secure</h2>
-            <p>Your thoughts are yours alone. All data lives locally or in your chosen cloud.</p>
+            <p>
+              Your thoughts are yours alone. All data lives locally or in your
+              chosen cloud.
+            </p>
           </div>
         </section>
       </main>
@@ -53,14 +57,14 @@ const Home: NextPage = () => {
           padding: 0 1rem;
           background-color: #faf5ee;
           color: #4a423a;
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
         }
         .hero {
           text-align: center;
           margin-bottom: 3rem;
         }
         h1 {
-          font-family: 'Pacifico', cursive;
+          font-family: "Pacifico", cursive;
           font-size: 3rem;
           margin: 0;
         }
@@ -110,7 +114,7 @@ const Home: NextPage = () => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
