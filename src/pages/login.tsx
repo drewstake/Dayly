@@ -1,42 +1,38 @@
 import Head from "next/head";
 import Link from "next/link";
 
-const Signup = () => {
+const Login = () => {
   return (
     <>
       <Head>
-        <title>Sign Up | Dayly</title>
-        <meta
-          name="description"
-          content="Create your Dayly account to start journaling."
-        />
+        <title>Login | Dayly</title>
+        <meta name="description" content="Login to your Dayly account." />
       </Head>
 
       <main className="container">
         <section className="form-section">
           <h1>
-            Join{" "}
             <Link
               href="/"
               className="accent"
               style={{ textDecoration: "none" }}
             >
-              Dayly
+              Welcome Back
             </Link>
           </h1>
 
           <p className="subtitle">
-            Create an account to begin your journaling journey.
+            Log in to continue your journaling journey.
           </p>
 
           <form className="form">
             <input type="email" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
-            <button type="submit">Sign Up</button>
+            <button type="submit">Log In</button>
           </form>
 
           <p className="redirect">
-            Already have an account? <Link href="/login">Log in</Link>
+            Don’t have an account? <Link href="/signup">Sign up</Link>
           </p>
         </section>
       </main>
@@ -45,49 +41,51 @@ const Signup = () => {
         .container {
           min-height: 100vh;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
+          padding: 0 1rem;
           background-color: #faf5ee;
-          font-family: "Roboto", sans-serif;
           color: #4a423a;
+          font-family: "Roboto", sans-serif;
         }
         .form-section {
-          text-align: center;
+          max-width: 400px;
+          width: 100%;
           background: #fff;
           padding: 2rem;
           border-radius: 1rem;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-          width: 100%;
-          max-width: 400px;
+          text-align: center;
         }
         h1 {
           font-family: "Pacifico", cursive;
-          font-size: 2.5rem;
-          margin-bottom: 0.5rem;
-        }
-        .accent {
-          color: #a68e6f;
+          font-size: 2rem;
+          margin-bottom: 1rem;
         }
         .subtitle {
           font-size: 1rem;
-          margin-bottom: 1.5rem;
+          font-weight: 300;
+          margin-bottom: 2rem;
+        }
+        .form {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
         }
         .form input {
-          width: 100%;
           padding: 0.75rem;
-          margin: 0.5rem 0;
           border: 1px solid #ddd;
           border-radius: 0.5rem;
           font-size: 1rem;
         }
         .form button {
-          width: 100%;
           padding: 0.75rem;
           background-color: #ebcb8b;
           color: #4a423a;
           border: none;
           border-radius: 0.5rem;
-          font-weight: bold;
+          font-weight: 500;
           cursor: pointer;
           transition: background-color 0.3s ease;
         }
@@ -98,9 +96,13 @@ const Signup = () => {
           margin-top: 1rem;
           font-size: 0.9rem;
         }
+        .redirect a {
+          color: #a68e6f;
+          text-decoration: underline;
+        }
       `}</style>
     </>
   );
 };
 
-export default Signup;
+export default Login;
